@@ -1,6 +1,10 @@
 package cmd
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/spf13/cobra"
+
+	"github.com/tormath1/virtcurse/components"
+)
 
 var (
 	logFile string
@@ -10,6 +14,9 @@ var (
 		Short: "manage your hypervisor from a curses interface",
 		Long: `manage your hypervisor from a curses interface using Libvirt APIs
 and supported drivers: https://libvirt.org/drivers.html`,
+		RunE: func(cmd *cobra.Command, args []string) error {
+			return components.Execute()
+		},
 	}
 )
 
