@@ -1,5 +1,7 @@
 ## VirtCurse
 
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/tormath1/virtcurse)](https://pkg.go.dev/github.com/tormath1/virtcurse)
+
 Manage your hypervisor from a curses interface using Libvirt APIs and its [supported](https://libvirt.org/drivers.html) drivers.
 
 ### Usage
