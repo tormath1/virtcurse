@@ -41,14 +41,17 @@ func (l Libvirt) ListDomain(opts driver.Options) ([]driver.Domain, error) {
 	}
 	domains = make([]driver.Domain, 0)
 	for _, dom := range doms {
-		n, err := dom.GetName()
-		if err != nil {
-			// TODO: Should we skip this error and use a default name
-			return nil, errors.Wrap(err, "unable to get domain's name")
-		}
-		domains = append(domains, Domain{name: n})
+		domains = append(domains, Domain{dom: dom})
 	}
 	return domains, nil
+}
+
+func (l Libvirt) GetDomain(name string) (driver.Domain, error) {
+	dom, err := l.conn.LookupDomainByName(name)
+	if err != nil {
+		return nil, errors.Wrap(err, "unable to lookup domain by name")
+	}
+	return Domain{dom: *dom}, nil
 }
 
 func (l Libvirt) Close() error {
