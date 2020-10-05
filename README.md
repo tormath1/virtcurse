@@ -2,6 +2,8 @@
 
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/tormath1/virtcurse)](https://pkg.go.dev/github.com/tormath1/virtcurse)
 
+:warning: :construction: it's heavily under-construction :construction: :warning:
+
 Manage your hypervisor from a curses interface using Libvirt APIs and its [supported](https://libvirt.org/drivers.html) drivers.
 
 ### Usage
@@ -25,6 +27,12 @@ Flags:
       --log log-file         enable logging in the log-file
       --log-file string      path to store the logs (default "./virtcurse.log")
 ```
+
+### Screenshot
+
+<p align="center">
+  <img src="doc/home.jpg" width="1000">
+</p>
 
 ### Build
 
