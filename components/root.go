@@ -8,6 +8,7 @@ import (
 	"github.com/tormath1/virtcurse/driver/libvirt"
 )
 
+// Executes the "root" component
 func Execute(cmd *cobra.Command) error {
 	libvirtURI, err := cmd.Flags().GetString("libvirt-uri")
 	if err != nil {
@@ -26,6 +27,7 @@ func Execute(cmd *cobra.Command) error {
 
 	components := []ui.Drawable{
 		NewListDomains(d),
+		NewGetConfig(d),
 	}
 
 	for _, component := range components {
