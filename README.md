@@ -31,7 +31,7 @@ Flags:
 ### Screenshot
 
 <p align="center">
-  <img src="doc/home.jpg" width="1000">
+  <img src="doc/home.gif" width="1000">
 </p>
 
 ### Build
