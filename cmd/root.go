@@ -15,7 +15,7 @@ var (
 		Long: `manage your hypervisor from a curses interface using Libvirt APIs
 and supported drivers: https://libvirt.org/drivers.html`,
 		RunE: func(cmd *cobra.Command, args []string) error {
-			return components.Execute(cmd)
+			return components.Execute(libvirtURI)
 		},
 	}
 )
